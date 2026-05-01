@@ -1,0 +1,117 @@
+/* LanguageSelector.module.css */
+
+.wrapper {
+  position: relative;
+  z-index: var(--z-dropdown);
+}
+
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-3);
+  background: rgba(255, 107, 0, 0.08);
+  border: 1px solid rgba(255, 107, 0, 0.2);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.trigger:hover {
+  background: rgba(255, 107, 0, 0.15);
+  border-color: rgba(255, 107, 0, 0.35);
+}
+
+.trigger:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.globe {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.currentLabel {
+  font-weight: 600;
+}
+
+.chevron {
+  font-size: 0.7rem;
+  transition: transform var(--transition-fast);
+  opacity: 0.6;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+/* ---- Dropdown ---- */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  min-width: 220px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-2);
+  list-style: none;
+  animation: fadeInScale 0.15s ease forwards;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: left;
+}
+
+.option:hover {
+  background: rgba(255, 107, 0, 0.08);
+  color: var(--color-text-primary);
+}
+
+.option:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: -2px;
+}
+
+.active {
+  background: rgba(255, 107, 0, 0.12);
+  color: var(--color-primary-light);
+  font-weight: 600;
+}
+
+.nativeLabel {
+  font-weight: 600;
+  color: inherit;
+  flex-shrink: 0;
+}
+
+.enLabel {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-left: auto;
+}
+
+.check {
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: var(--text-base);
+  flex-shrink: 0;
+}

@@ -1,0 +1,22 @@
+/* page.module.css */
+
+.main {
+  /* Ensure tabIndex target receives visible focus for screen readers */
+  outline: none;
+}
+
+.section {
+  position: relative;
+}
+
+.sectionDivider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-border),
+    transparent
+  );
+  max-width: 1000px;
+  margin: 0 auto;
+}
